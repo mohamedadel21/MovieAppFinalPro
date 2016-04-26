@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smartware.sharkawy.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/eyeglasses3"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.mohammed.movieapp.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.mohammed.movieapp.DetailedActivity"
+            android:parentActivityName="com.example.mohammed.movieapp.MainActivity"></activity>
+
+        <provider
+            android:authorities="@string/content_authority"
+            android:name="com.example.mohammed.movieapp.data.MovieProvider"
+            android:exported="false" />
+    </application>
+
+</manifest>
